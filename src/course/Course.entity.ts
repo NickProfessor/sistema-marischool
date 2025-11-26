@@ -1,4 +1,4 @@
-import { Enrollment } from 'src/enrollment/Enrollment.entity';
+import { Enrollment } from '../enrollment/Enrollment.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 
 @Entity()
