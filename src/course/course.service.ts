@@ -1,26 +1,14 @@
 import { Injectable } from '@nestjs/common';
-import { CreateCourseDto } from './dto/create-course.dto';
-import { UpdateCourseDto } from './dto/update-course.dto';
 
 @Injectable()
-export class CourseService {
-  create(createCourseDto: CreateCourseDto) {
-    return 'This action adds a new course';
-  }
+export class CoursesService {
+  private courses = [
+    { id: 1, name: 'Curso de NestJS', description: 'Aprenda NestJS do básico ao avançado.' },
+    { id: 2, name: 'Curso de Angular', description: 'Aprenda Angular com exemplos práticos.' },
+    { id: 3, name: 'Curso de Node.js', description: 'Domine Node.js e desenvolva aplicações back-end.' },
+  ];
 
   findAll() {
-    return `This action returns all course`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} course`;
-  }
-
-  update(id: number, updateCourseDto: UpdateCourseDto) {
-    return `This action updates a #${id} course`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} course`;
+    return this.courses;
   }
 }
